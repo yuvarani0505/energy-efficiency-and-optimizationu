@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Efficiency Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Energy Efficiency Predictor</h2>
+        <form action="/predict" method="post">
+            <label>Relative Compactness:</label>
+            <input type="number" step="any" name="compactness" required>
+
+            <label>Surface Area:</label>
+            <input type="number" step="any" name="surface" required>
+
+            <label>Wall Area:</label>
+            <input type="number" step="any" name="wall" required>
+
+            <label>Roof Area:</label>
+            <input type="number" step="any" name="roof" required>
+
+            <label>Overall Height:</label>
+            <input type="number" step="any" name="height" required>
+
+            <label>Glazing Area:</label>
+            <input type="number" step="any" name="glazing" required>
+
+            <label>Glazing Area Distribution:</label>
+            <input type="number" step="any" name="distribution" required>
+
+            <input type="submit" value="Predict Efficiency">
+        </form>
+    </div>
+</body>
+</html>
